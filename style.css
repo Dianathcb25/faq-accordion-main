@@ -15,7 +15,6 @@ body {
     border-radius: 10px;
     margin-top: 200px;
     width: 30%;
-    height: 80%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -29,6 +28,7 @@ body {
     align-items:flex-start;
     justify-content:flex-start;
     padding: 10px;
+    gap: 1rem;
 }
 
 h1 {
@@ -40,17 +40,26 @@ h1 {
     font-family: "Work Sans", sans-serif;
     font-size: .8rem;
     color: #2f1633;
+    cursor: pointer;
 }
+ .faq h3:hover {
+    color: #b326e4;
+ }
 
 .faq-header-1, .faq-header-2, .faq-header-3, .faq-header-4 {
     display: flex;
     align-items:flex-start;
-    justify-content:flex-start;
+    justify-content:space-between;
     padding: 10px;
 }
 
-#icon-minus {
+.icon-minus {
     display: none;
+}
+
+.icon-plus, .icon-minus {
+    width: 1.2rem;
+    cursor: pointer;
 }
 
 .faq-2, .faq-3, .faq-4 {
@@ -63,5 +72,38 @@ border-top: 0.1px solid rgba(226, 226, 226, 0.477);
     font-size: .8rem;
     font-weight: 200;
     color: #2f1633;
-    /* display: none; */
+}
+
+.content {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    
+    .container {
+        width: 60%;
+        margin-top: 180px;
+    }
+}
+
+@media (max-width: 380px) {
+    body {
+        background-image: url(./assets/images/background-pattern-mobile.svg);
+        background-color: #f9eeff;
+        background-repeat: no-repeat;
+    }
+
+    .container {
+        width: 90%;
+        margin-top: 120px;
+        padding: 0;
+    }
+
+    .faq-title {
+        gap: 1rem;
+    }
+
+    .content p {
+        font-size: 0.9rem;
+    }
 }
